@@ -1,0 +1,72 @@
+{%- if include.internal -%}
+
+{% for service in page.services %}
+<section class="services-section py-5">
+  <div class="container">
+    <div class="row mb-4 text-center">
+      <div class="col">
+        <h2>{{ service.title }}</h2>
+        <p class="lead">{{ service.lead }}</p>
+      </div>
+    </div>
+    <div class="row">
+      {% assign col_size = 12 | divided_by: service.cards | size %}
+      {% for card in service.cards %}
+      <div class="col-md-{{ col_size }} mb-4">
+        <div class="card">
+          <div class="card-img-top">
+            <img src="" alt="{{ card.card_title }}" class="img-fluid service-img" data-base="{{ card.img }}" data-id="service-{{ forloop.index }}">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ card.card_title }}</h5>
+            <p class="card-text">{{ card.card_text }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const serviceImages = document.querySelectorAll('.service-img');
+
+  const resolutions = [3200, 2400, 1920, 1600, 1280, 1024, 768, 640, 480];
+  const formats = ['webp', 'jpg', 'png']; // Prioritized formats
+
+  serviceImages.forEach(imgElement => {
+    const baseName = imgElement.dataset.base;
+    let srcset = '';
+
+    formats.some(format => {
+      let found = false;
+      resolutions.forEach(resolution => {
+        const filePath = `/assets/img/${baseName}/${baseName}-${resolution}.${format}`;
+        const image = new Image();
+        image.src = filePath;
+
+        image.onload = function () {
+          // Image exists, add it to the srcset
+          srcset += `${filePath} ${resolution}w, `;
+          found = true;
+        };
+      });
+
+      if (found) {
+        imgElement.setAttribute('srcset', srcset.trim());
+        imgElement.setAttribute('sizes', '(max-width: 1200px) 100vw, 100%');
+        return true; // Stop checking other formats once a valid one is found
+      }
+    });
+  });
+});
+
+</script>
+
+
+
+
+{%- endif -%}
