@@ -266,7 +266,7 @@ compress_html:
   blanklines: true
 
 plugins:
-  - jekyll-github-metadata
+#  - jekyll-github-metadata
   - jekyll-paginate
   - jekyll-include-cache
   - jekyll-sitemap

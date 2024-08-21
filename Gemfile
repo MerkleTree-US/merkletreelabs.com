@@ -12,7 +12,7 @@ source "https://rubygems.org"
 gem "minima", "~> 2.5"
 gem "chulapa-jekyll"
 
-gem "jekyll-github-metadata"
+#gem "jekyll-github-metadata"
 gem 'dotenv', groups: [:development, :test]
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
