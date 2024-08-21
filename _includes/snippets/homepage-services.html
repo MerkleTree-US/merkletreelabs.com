@@ -1,16 +1,22 @@
-{%- if include.internal -%}
-
 {% for service in page.services %}
-<section class="services-section py-5">
+<section class="services-section">
   <div class="container">
+    {% assign has_header = service.title or service.lead %}
+    {% if has_header %}
     <div class="row mb-4 text-center">
       <div class="col">
+        {% if service.title %}
         <h2>{{ service.title }}</h2>
+        {% endif %}
+        {% if service.lead %}
         <p class="lead">{{ service.lead }}</p>
+        {% endif %}
       </div>
     </div>
-    <div class="row">
-      {% assign col_size = 12 | divided_by: service.cards | size %}
+    {% endif %}
+    {% if service.cards.size > 0 %}
+    {% assign col_size = 12 | divided_by: service.cards.size %}
+    <div class="row {% unless has_header %}mt-0{% endunless %}">
       {% for card in service.cards %}
       <div class="col-md-{{ col_size }} mb-4">
         <div class="card">
@@ -18,16 +24,20 @@
             <img src="" alt="{{ card.card_title }}" class="img-fluid service-img" data-base="{{ card.img }}" data-id="service-{{ forloop.index }}">
           </div>
           <div class="card-body text-center">
-            <h5 class="card-title">{{ card.card_title }}</h5>
+            <h5 class="card-title"><a href="{{ card.url }}">{{ card.card_title }}</a></h5>
             <p class="card-text">{{ card.card_text }}</p>
           </div>
         </div>
       </div>
       {% endfor %}
     </div>
+    {% else %}
+    <p>No services available.</p>
+    {% endif %}
   </div>
 </section>
 {% endfor %}
+
 
 
 <script>
@@ -42,31 +52,14 @@ document.addEventListener('DOMContentLoaded', function () {
     let srcset = '';
 
     formats.some(format => {
-      let found = false;
       resolutions.forEach(resolution => {
         const filePath = `/assets/img/${baseName}/${baseName}-${resolution}.${format}`;
-        const image = new Image();
-        image.src = filePath;
-
-        image.onload = function () {
-          // Image exists, add it to the srcset
-          srcset += `${filePath} ${resolution}w, `;
-          found = true;
-        };
+        srcset += `${filePath} ${resolution}w, `;
       });
-
-      if (found) {
-        imgElement.setAttribute('srcset', srcset.trim());
-        imgElement.setAttribute('sizes', '(max-width: 1200px) 100vw, 100%');
-        return true; // Stop checking other formats once a valid one is found
-      }
+      imgElement.setAttribute('srcset', srcset.trim());
+      imgElement.setAttribute('sizes', '(max-width: 1200px) 100vw, 100%');
+      return true; // Stop after the first valid format
     });
   });
 });
-
 </script>
-
-
-
-
-{%- endif -%}

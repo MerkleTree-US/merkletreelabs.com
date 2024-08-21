@@ -44,3 +44,55 @@
   font-weight: 800;
   font-style: normal;
 }
+
+
+
+
+/* Custom top padding for the services section */
+.services-section {
+  padding-top: 1rem; /* Adjust this value as needed */
+  padding-bottom: 2rem; /* Keep some bottom padding */
+}
+
+@media (max-width: 767.98px) {
+  .services-section {
+    padding-top: 0.5rem; /* Even less padding on small screens */
+  }
+}
+
+/* Reduce the margin between the header (title/lead) and cards */
+.services-section .row.mb-4 {
+  margin-bottom: 1.5rem; /* Adjust this value as needed */
+}
+
+/* Ensure all cards have the same height */
+.services-section .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.services-section .card-body {
+  flex-grow: 1;
+}
+
+.services-section .card-img-top img {
+  width: 100%;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0.75); /* Darkens the image slightly */
+}
+
+.services-section .card-img-top img:hover {
+  transform: scale(1.05); /* Slightly enlarge the image */
+  filter: brightness(0.85); /* Lighten the image on hover */
+}
+
+
+/* Media query for small screens */
+@media (max-width: 767.98px) {
+  .services-section .card-img-top img {
+    width: 90%;  /* Reduce image size */
+    margin: 0 auto; /* Center the image */
+  }
+}

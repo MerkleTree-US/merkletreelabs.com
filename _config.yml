@@ -156,7 +156,7 @@ googlefonts:
 chulapa-skin:
   highlight     :  # default["default"]
   skin         :  # Optional predefined skins
-  autothemer    :  false # Bool: Use autotheming
+  autothemer    :  true # Bool: Use autotheming
   vars          :
     primary: "#22272e"     
     link-color: "#0f172a"     
