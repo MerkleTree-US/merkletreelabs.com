@@ -42,6 +42,8 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+  const baseUrl = '{{ "" | relative_url }}';  // Dynamic base URL
+
   const serviceImages = document.querySelectorAll('.service-img');
 
   const resolutions = [3200, 2400, 1920, 1600, 1280, 1024, 768, 640, 480];
@@ -53,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     formats.some(format => {
       resolutions.forEach(resolution => {
-        const filePath = `/assets/img/${baseName}/${baseName}-${resolution}.${format}`;
+        const filePath = `${baseUrl}assets/img/${baseName}/${baseName}-${resolution}.${format}`;
         srcset += `${filePath} ${resolution}w, `;
       });
       imgElement.setAttribute('srcset', srcset.trim());
@@ -63,3 +65,4 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
+
