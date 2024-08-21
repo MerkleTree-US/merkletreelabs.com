@@ -42,7 +42,7 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const baseUrl = '{{ "" | relative_url }}';  // Dynamic base URL
+  const baseUrl = '{{ "" | relative_url }}/';  // Ensure trailing slash
 
   const serviceImages = document.querySelectorAll('.service-img');
 
@@ -65,4 +65,5 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
+
 
