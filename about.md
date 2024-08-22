@@ -4,9 +4,9 @@ subtitle: Who we are and what we are all about
 permalink: /about/
 
 exerpt: About Merkle Tree Labs andf the post-quantum systems they support.
-og_image: ./assets/img/digi-waves/digi-waves-480.webp
+og_image: /assets/img/digi-waves/digi-waves-480.webp
 header_type: hero
-header_img: ./assets/img/digi-waves/digi-waves-3200.webp
+header_img: /assets/img/digi-waves/digi-waves-3200.webp
 ---
 
 ## Our Mission

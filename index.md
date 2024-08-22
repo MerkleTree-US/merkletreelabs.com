@@ -4,9 +4,9 @@ title: Merkle Tree Labs
 subtitle: Forward thinking
 ctaline: "At MerkleTree Labs, we’re not just preparing for the future—we’re creating it."
 exerpt: Merkle Tree Labs is building the future of secure, post-quantum systems through projects focused on post-quantum secure cryprography pushing the next generation of secure systems.
-og_image: ./assets/img/hero-tree/hero-tree-480.webp
+og_image: /assets/img/hero-tree/hero-tree-480.webp
 header_type: hero
-header_img: ./assets/img/hero-tree/hero-tree-3200.webp
+header_img: /assets/img/hero-tree/hero-tree-3200.webp
 services:
   - cards:
       - img: "blocks-sq"
