@@ -2,6 +2,7 @@
 layout: home
 title: Merkle Tree Labs
 subtitle: Forward thinking
+ctaline: "At MerkleTree Labs, we’re not just preparing for the future—we’re creating it."
 exerpt: Merkle Tree Labs is building the future of secure, post-quantum systems through projects focused on post-quantum secure cryprography pushing the next generation of secure systems.
 og_image: ./assets/img/hero-tree/hero-tree-480.webp
 header_type: hero
@@ -10,8 +11,8 @@ services:
   - cards:
       - img: "blocks-sq"
         card_title: "Post-Quantum Cryptography Tools"
-        card_text: "Empowering the next generation of secure systems with advanced, quantum-resistant cryptographic solutions."
-        url: "/services/strategy/"
+        card_text: "Empowering the next generation of secure systems with advanced, quantum-resistant cryptographic solutions and integrations."
+        url: "#"
 
       - img: "squares-circle"
         card_title: "Open-Source Collaboration"
@@ -25,18 +26,19 @@ services:
 
       # Add more cards as needed
   # Add more service sections as needed
+
+project_links:
+    - url: "mailto:hello@merkletreelabs.com" # url1
+      icon: fa fa-envelopes-bulk
+      label: Contact Us
 ---
 
+**Our mission is simple:** to protect what matters most by pushing the boundaries of cryptographic innovation. 
 
-> At MerkleTree Labs, we’re not just preparing for the future—we’re creating it. We’re dedicated to building secure, forward-thinking systems that are ready to face tomorrow’s challenges. 
-
-{% include snippets/homepage-services.html %}
-
-
-Our mission is simple: to protect what matters most by pushing the boundaries of cryptographic innovation. 
-
+We’re dedicated to building secure, forward-thinking systems that are ready to face tomorrow’s challenges. 
 With a commitment to open-source development and a focus on crypto-agile solutions, we’re ensuring that the systems of today can withstand the threats of tomorrow.
 
+{% include snippets/homepage-services.html %}
 
 
 ## Why MerkleTree Labs?

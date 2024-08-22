@@ -1,6 +1,12 @@
 ---
 title: About
+subtitle: Who we are and what we are all about
 permalink: /about/
+
+exerpt: About Merkle Tree Labs andf the post-quantum systems they support.
+og_image: ./assets/img/digi-waves/digi-waves-480.webp
+header_type: hero
+header_img: ./assets/img/digi-waves/digi-waves-3200.webp
 ---
 
 ## Our Mission
@@ -9,7 +15,9 @@ At MerkleTree Labs, our mission is to lead the charge in securing the digital fu
 
 ## Our Vision
 
-We envision a world where digital security is proactive, not reactive—where systems are designed with the future in mind, ensuring they remain robust against threats we can’t yet imagine. Our goal is to set the standard for post-quantum security, driving innovation that keeps pace with the rapid evolution of technology. As we look ahead, we see a future where security is synonymous with progress, and where MerkleTree Labs is at the forefront of that transformation.
+We envision a world where digital security is proactive, not reactive—where systems are designed with the future in mind, ensuring they remain robust against threats yet to be materialized. Our goal is to set the standard for post-quantum security, driving innovation that keeps pace with the rapid evolution of technology. 
+
+As we look ahead, we see a future where security is synonymous with progress, and where MerkleTree Labs is at the forefront of that transformation.
 
 ## Our Approach
 

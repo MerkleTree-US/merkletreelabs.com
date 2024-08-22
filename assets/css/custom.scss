@@ -71,6 +71,20 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  position: relative;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #0d1117;
+  background-clip: border-box;
+  border: 1px solid rgba(13, 17, 23, 0.125);
+  border-radius: .25rem;
+  flex-wrap: nowrap;
+  align-content: flex-end;
+  align-items: flex-end;  
+}
+
+.services-section a, .services-section p, .services-section h1, .services-section h2, .services-section h3{
+  color: #fff;
 }
 
 .services-section .card-body {
@@ -95,4 +109,144 @@
     width: 90%;  /* Reduce image size */
     margin: 0 auto; /* Center the image */
   }
+}
+
+/* New Hero Section Styling */
+.hero-section-secondary {
+  background-color: #000; /* Black background for the new section */
+  padding: 60px 0;
+}
+
+/* Angled Divider Styling */
+.angled-divider {
+  position: relative;
+  width: 100%;
+  height: 75px;
+  background-color: #000; 
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 40%);
+  margin-top: -1px; /* Removes gap caused by anti-aliasing */
+  margin-bottom: -3px; /* Removes gap caused by anti-aliasing */
+}
+
+/* Additional padding adjustments for the section below */
+.services-section {
+  padding-top: 50px; /* Adjust as needed */
+}
+
+
+.hero-chulapa h1, .hero-chulapa-image h1, .hero-chulapa a, .hero-chulapa-image a, .splash-chulapa h1, .splash-chulapa-image h1, .hero-chulapa p, .hero-chulapa-image p, .splash-chulapa p, .splash-chulapa-image p {
+    font-family: Mukta;
+}
+
+.hero-chulapa-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 100px; /* Additional padding to push content down */
+  height: 90vh; /* Adjust the height as needed */
+
+}
+
+.hero-chulapa-image h1, .hero-chulapa-image p {
+    color: #f4f4f5;
+    text-shadow: 0.1rem 0.1rem 0.2rem #0d1117;
+}
+
+.hero-chulapa h1, .hero-chulapa-image h1, .splash-chulapa h1, .splash-chulapa-image h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+}
+
+@media (min-width: 768px) {
+    .hero-chulapa h1, .hero-chulapa-image h1, .splash-chulapa h1, .splash-chulapa-image h1 {
+        font-size: 3.5rem;
+        font-weight: 300;
+    }
+}
+
+
+header .chulapa-cta {
+  font-size: 17.5px;
+  color: #fff;
+  font-weight: 400;
+  margin-top: 2rem;
+  //margin-bottom: 1rem;
+  text-align: center;
+  text-shadow: 4px 4px 8px rgba(32, 214, 218, 0.4); /* Shadow effect with a subtle color */
+
+}
+
+
+@media (max-width: 1199.98px) {
+    .navbar-chulapa-fab .navbar-toggler {
+        top: 1.5rem;
+        //bottom: 3.15rem;
+        right: 1.5rem;
+    }
+}
+
+.navbar-chulapa-fab .navbar-toggler {
+    background-color: #22272e;
+    border-color: #22272e;
+    height: 56px;
+    width: 56px;
+    position: fixed;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    z-index: 20000;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1199.98px) {
+    .navbar-chulapa-fab .navbar-chulapa-fab-background {
+        top: 1.5rem;
+        //bottom: 3.15rem;
+        right: 1.5rem;
+    }
+}
+.navbar-chulapa-fab-background {
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    position: fixed;
+    background-image: radial-gradient(#22272e, #22272e);
+    z-index: 10000;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+
+
+.navbar-chulapa-fab label {
+    line-height: unset;
+}
+
+.navbar-expand>.container, .navbar-expand>.container-fluid, .navbar-expand>.container-sm, .navbar-expand>.container-md, .navbar-expand>.container-lg, .navbar-expand>.container-xl {
+    flex-wrap: nowrap;
+}
+.navbar-expand>.container, .navbar-expand>.container-fluid, .navbar-expand>.container-sm, .navbar-expand>.container-md, .navbar-expand>.container-lg, .navbar-expand>.container-xl {
+    padding-right: 0;
+    padding-left: 0;
+}
+.navbar .container, .navbar .container-fluid, .navbar .container-sm, .navbar .container-md, .navbar .container-lg, .navbar .container-xl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (min-width: 768px) {
+    .ml-md-2, .mx-md-2 {
+        margin-left: .5rem !important;
+    }
+}
+@media (min-width: 768px) {
+    .mr-md-2, .mx-md-2 {
+        margin-right: .5rem !important;
+    }
+}
+
+
+.a {
+  font-family: Mukta;
 }

@@ -1,7 +1,7 @@
 ---
 layout: minimal
 ---
-	{% include components/headers.html headertype= page.header_type imghero=page.header_img projects=page.project_links %}
+	{% include components/homeheaders.html headertype= page.header_type imghero=page.header_img projects=page.project_links %}
 	<main class="container-lg pb-3 flex-fill">
 	  {% if page.show_breadcrumb or page.show_date or page.show_sociallinks -%}
 	  {%- include components/breadcrumbdatesocial.html -%}
@@ -25,6 +25,7 @@ layout: minimal
 			 {% include components/toc.html sanitize=false html=content h_min=h_min h_max=h_max skip_no_ids=true id="toc" class="chulapa-toc-wrapper.list-group.mb-5.mx-3.mx-lg-5" item_class="list-group-item.font-weight-bold.py-1.pr-0.mr-0.chulapa-toc-reset" %}
 			 </nav>
 			  {% endif %}
+
 			{{- content -}}
 			
 			{% if page.show_applause %} 
