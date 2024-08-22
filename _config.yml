@@ -117,10 +117,10 @@ navbar:
     url     :  # default["url/baseurl"]
     img     :  /assets/img/logo/logo_no-text_100.webp # An small image, try 30x30px
   nav:
-#  - title   : Blog # Label
-#    url     : /blog/ # url  
   - title   : About # Label
     url     : /about/ # url  
+  - title   : Blog # Label
+    url     : /blog/ # url  
 #  - title   : Extras
 #    child   :
 #      - title : Tags
@@ -208,12 +208,12 @@ paginator_maxnum: 3  #default[3] Custom: max of number to be displayed on the pa
 
 
 # Collections https://jekyllrb.com/docs/step-by-step/09-collections/
-collections:
-  cheatsheet:
-    output: true
-    permalink: /cheatsheets/:name
-collections_dir     : 
-permalink           : /:year:month:day_:title/
+#collections:
+#  cheatsheet:
+#    output: true
+#    permalink: /cheatsheets/:name
+#collections_dir     : 
+#permalink           : /:year:month:day_:title/
 
 # Defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:
@@ -241,21 +241,21 @@ defaults:
       show_comments     : true
       show_tags         : true
       show_categories   : true
-      show_author       : true
+      show_author       : false
       show_toc          : false
-  -
-    scope:
-      path: ""
-      type: "cheatsheet"
-    values:
-      header_type       : "hero"
-      show_bottomnavs   : true
-      show_sociallinks  : true
-      include_on_search : true
-      show_breadcrumb   : true
-      breadcrumb_list   :
-        - label: Cheatsheets
-          url: /cheatsheets
+#  -
+#    scope:
+#      path: ""
+#      type: "cheatsheet"
+#    values:
+#      header_type       : "hero"
+#      show_bottomnavs   : true
+#      show_sociallinks  : true
+#      include_on_search : true
+#      show_breadcrumb   : true
+#      breadcrumb_list   :
+#        - label: Cheatsheets
+#          url: /cheatsheets
 
 
 

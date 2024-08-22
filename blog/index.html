@@ -1,18 +1,19 @@
 ---
 layout: minimal
-title: Blog
-subtitle: 'News and updates'
-excerpt: Latest news
+title: Merkle Tree Labs Blog
+subtitle: 'Exploring the Frontiers of Technology and Security'
+excerpt: "Merkle Roots: Updates from the Cryptoverse"
 og_image: assets/img/earth-space/earth-space-480.webp
 header_type: hero
 header_img: assets/img/earth-space/earth-space-2400.webp
-
 ---
+
 <!-- Chulapa template for pagination -->
 {%- include components/headers.html headertype= page.header_type imghero=page.header_img -%}
+
 <main class="container-lg pb-3 flex-fill">
   <div class="row pt-2 mt-3">
-    <section class="col-md-8 offset-md-2">
+    <section class="col-md-10 offset-md-1">
     {% include_cached components/indexcards.html cacheddocs=paginator.posts  cachedlimit=site.paginate %}
     </section>
   </div>
