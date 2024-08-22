@@ -17,12 +17,12 @@ services:
       - img: "squares-circle"
         card_title: "Open-Source Collaboration"
         card_text: "Driving innovation through transparency and community-driven development, ensuring our tools are robust, adaptable, and future-ready."
-        url: "/services/strategy/"
+        url: "#"
 
       - img: "block-stack"
         card_title: "Innovative System Support"
         card_text: "Providing comprehensive support for integrating post-quantum security into existing infrastructures, helping organizations stay ahead of the curve."
-        url: "/services/strategy/"
+        url: "#"
 
       # Add more cards as needed
   # Add more service sections as needed
